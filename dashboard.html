@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Investor Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav>
+  <a href="index.html">Logout</a>
+</nav>
+
+<div class="login-box">
+  <h1>Investor Dashboard</h1>
+
+  <p>Daily Payment: <strong>KSh 50</strong></p>
+  <p>Total Payments: <strong>420</strong></p>
+
+  <p>Payments Made: <span id="made">0</span></p>
+  <p>Remaining: <span id="remain">420</span></p>
+  <p>Total Paid: KSh <span id="total">0</span></p>
+
+  <button onclick="pay()">Record Payment</button>
+</div>
+
+<script>
+let made = 0;
+const daily = 50;
+const max = 420;
+
+function pay() {
+  if (made >= max) {
+    alert("Agreement completed");
+    return;
+  }
+  made++;
+  document.getElementById("made").innerText = made;
+  document.getElementById("remain").innerText = max - made;
+  document.getElementById("total").innerText = made * daily;
+}
+</script>
+
+</body>
+</html>
