@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wayne Enterprise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="#" onclick="contact()">Contact</a>
+</nav>
+
+<div class="login-box">
+  <h1 class="logo">🦇 WAYNE ENTERPRISE</h1>
+  <p class="subtitle">Long-Term Private Income Project</p>
+
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+  <button class="secondary" onclick="resetPassword()">Reset Password</button>
+
+  <p id="message"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
